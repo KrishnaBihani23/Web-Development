@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquere Fitness</title>
+
+    <!-- Firebase SDK -->
+    <!-- Include Firebase scripts here if needed -->
+
+    <style>
+        /* Your CSS styles go here */
+        body {
+            margin: 0;
+            padding: 0;
+            height: fit-content;
+            background: url('gym-background.jpg') center/cover no-repeat;
+            /* Use your image filename here */
+            color: rgb(250, 250, 250);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: ;
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+        }
+
+        .form {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background-color: #14191d;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+.navbar {
+        display: inline-block;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 25px;
+        font: bold;
+
+
+    }
+
+    .navbar li a {
+        text-decoration: none;
+        color: rgb(196, 185, 185);
+        padding:40px;
+        margin: 21x;
+    
+    }
+
+    .navbar li a:hover,
+    .navbar li a:active {
+        color: white
+    }
+    #submitForm{
+        margin: 15px auto;
+        text-align: center;
+        display: block;
+        width: 50%;
+        border-radius: 5px;
+        font-size: 15px;
+        padding: 8px;
+        margin: 41px;
+
+    }
+    #srushti{
+              font-family: serif;
+    }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <!-- Your header content goes here -->
+    </header>
+
+    <div class="container">
+        <div class="Mid">
+            <nav class="navbar">
+                <ul class="ul">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">More</a></li>
+                </ul>
+            </nav>
+        </div>
+        <h1 id="srushti">
+            Endure Fitness
+            <br>
+            Best Gym in Pune
+        </h1>
+        <form id="submitForm">
+            <div class="form">
+                <input type="text" name="smthng1" placeholder="Enter your Name">
+            </div>
+            <div class="form">
+                <input type="text" name="smthng2" placeholder="Address">
+            </div>
+            <div class="form">
+                <input type="text" name="smthng3" placeholder="Contact number">
+            </div>
+            <div class="form">
+                <input type="text" name="smthng4" placeholder="Email id">
+            </div>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+
+    <!-- Initialize Firebase and Firestore -->
+    <!-- Include Firebase initialization scripts here if needed -->
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.getElementById('submitForm');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                // Get form data
+                var formData = new FormData(form);
+                var userData = {
+                    name: formData.get('smthng1'),
+                    address: formData.get('smthng2'),
+                    contactNumber: formData.get('smthng3'),
+                    email: formData.get('smthng4')
+                };
+
+                // Mock submission success for the example
+                // You should replace this with actual form submission logic
+                var submissionSuccess = true;
+
+                if (submissionSuccess) {
+                    // Redirect to the success page
+                    window.location.href = 'success.html';
+                } else {
+                    alert('Failed to submit form. Please try again.');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+
